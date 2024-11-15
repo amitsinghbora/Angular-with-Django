@@ -1,0 +1,11 @@
+<button (click)="fetch_data()">Create Task</button>
+
+<ul *ngIf="data.length > 0">
+  <li *ngFor="let item of data">
+    <strong>{{ item.name }}</strong> <!-- Display name -->
+    <p>{{ item.role }}</p>           <!-- Display role -->
+  </li>
+</ul>
+
+<!-- Optional loading indicator -->
+<div *ngIf="!data.length">Loading...</div>
